@@ -7,7 +7,7 @@ import Col from "react-bootstrap/Col";
 
 export function EmployeeCard(props) {
   return (
-    <ListGroup.Item>
+    <ListGroup.Item style={{ cursor: "pointer" }} onClick={() => props.handleClick(props)}>
       <Container fluid>
         <Row className="justify-content-between align-items-center">
           <Col xs={2}>
