@@ -1,6 +1,13 @@
 import React from "react";
-import "./heading.styles.css";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 
 export function Heading() {
-  return <h1>Employee Directory</h1>;
+  return (
+    <Container className="bg-light" fluid>
+      <Row className="justify-content-center my-3">
+        <h1>Employee Directory</h1>
+      </Row>
+    </Container>
+  );
 }
