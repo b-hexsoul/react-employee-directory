@@ -17,7 +17,7 @@ class EmployeeContainer extends Component {
   }
 
   componentDidMount() {
-    fetch("https://randomuser.me/api/?results=4")
+    fetch("https://randomuser.me/api/?results=20&nat=US")
       .then((res) => res.json())
       .then((body) => {
         console.log(body.results);
@@ -27,6 +27,10 @@ class EmployeeContainer extends Component {
 
   handleInput = (e) => {
     this.setState({ search: e.target.value });
+  };
+
+  handleClick = (props) => {
+    this.setState({ selected: props.employee });
   };
 
   render() {
@@ -39,10 +43,14 @@ class EmployeeContainer extends Component {
       <Container fluid>
         <Row>
           <Col xs={4}>
-            <SearchListContainer employees={filteredEmployees} handleInput={this.handleInput} />
+            <SearchListContainer
+              employees={filteredEmployees}
+              handleInput={this.handleInput}
+              handleClick={this.handleClick}
+            />
           </Col>
           <Col>
-            <EmployeeBoxDetail employee={this.selected} />
+            <EmployeeBoxDetail employee={this.state.selected} />
           </Col>
         </Row>
       </Container>
