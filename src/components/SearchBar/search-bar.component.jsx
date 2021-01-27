@@ -7,8 +7,8 @@ export function SearchBar(props) {
       <Form.Control
         type="search"
         placeholder="Name"
-        onChange={() => {
-          props.handleInput();
+        onChange={(e) => {
+          props.handleInput(e);
         }}
       />
     </Form.Group>
