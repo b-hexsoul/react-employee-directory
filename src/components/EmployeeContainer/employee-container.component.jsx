@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { SearchListContainer } from "../SearchListContainer/search-list-container.component";
+import SearchListContainer from "../SearchListContainer/search-list-container.component";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -10,7 +10,6 @@ class EmployeeContainer extends Component {
 
     this.state = {
       employees: [],
-      selected: {},
       search: "",
     };
   }
@@ -28,10 +27,6 @@ class EmployeeContainer extends Component {
     this.setState({ search: e.target.value });
   };
 
-  handleClick = (props) => {
-    this.setState({ selected: props.employee });
-  };
-
   render() {
     let filteredEmployees = this.state.employees.filter((employee) => {
       let employeeName = employee.name.first + " " + employee.name.last;
@@ -42,11 +37,7 @@ class EmployeeContainer extends Component {
       <Container fluid>
         <Row>
           <Col>
-            <SearchListContainer
-              employees={filteredEmployees}
-              handleInput={this.handleInput}
-              handleClick={this.handleClick}
-            />
+            <SearchListContainer employees={filteredEmployees} handleInput={this.handleInput} />
           </Col>
         </Row>
       </Container>
