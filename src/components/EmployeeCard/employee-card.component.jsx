@@ -10,13 +10,18 @@ export function EmployeeCard(props) {
     <ListGroup.Item style={{ cursor: "pointer" }} onClick={() => props.handleClick(props)}>
       <Container>
         <Row className="justify-content-center align-items-center">
-          <Col sm>
+          <Col sm={2}>
             <Image className="mx-3" src={props.employee.picture.thumbnail} alt="employee" roundedCircle />
           </Col>
           <Col sm>
             <h4>
               {props.employee.name.first} {props.employee.name.last}
             </h4>
+          </Col>
+          <Col sm>
+            <h6>
+              {props.employee.location.city}, {props.employee.location.state}
+            </h6>
           </Col>
         </Row>
       </Container>

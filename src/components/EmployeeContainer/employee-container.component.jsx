@@ -34,7 +34,7 @@ class EmployeeContainer extends Component {
     });
 
     return (
-      <Container fluid>
+      <Container fluid className="bg-light ">
         <Row>
           <Col>
             <SearchListContainer employees={filteredEmployees} handleInput={this.handleInput} />
