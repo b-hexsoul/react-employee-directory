@@ -8,12 +8,12 @@ import Col from "react-bootstrap/Col";
 export function EmployeeCard(props) {
   return (
     <ListGroup.Item style={{ cursor: "pointer" }} onClick={() => props.handleClick(props)}>
-      <Container fluid>
-        <Row className="justify-content-between align-items-center">
-          <Col xs={2}>
-            <Image src={props.employee.picture.thumbnail} alt="employee" roundedCircle />
+      <Container>
+        <Row className="justify-content-center align-items-center">
+          <Col sm>
+            <Image className="mx-3" src={props.employee.picture.thumbnail} alt="employee" roundedCircle />
           </Col>
-          <Col xs={9}>
+          <Col sm>
             <h4>
               {props.employee.name.first} {props.employee.name.last}
             </h4>

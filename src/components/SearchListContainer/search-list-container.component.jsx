@@ -3,6 +3,7 @@ import { SearchBar } from "../SearchBar/search-bar.component";
 import { EmployeeList } from "../EmployeeList/employee-list.component";
 import { EmployeeBoxDetail } from "../EmployeeBoxDetail/employee-box-detail.component";
 import Card from "react-bootstrap/Card";
+import "./search-list-container.styles.css";
 
 class SearchListContainer extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class SearchListContainer extends Component {
 
   render() {
     return (
-      <Card>
+      <Card className="card mx-auto">
         <Card.Body className="text-center">
           <SearchBar className="mx-auto" handleInput={this.props.handleInput} />
           <EmployeeList employees={this.props.employees} handleClick={this.handleClick} />
