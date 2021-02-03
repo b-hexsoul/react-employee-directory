@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { SearchListContainer } from "../SearchListContainer/search-list-container.component";
-import { EmployeeBoxDetail } from "../EmployeeBoxDetail/employee-box-detail.component";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -42,15 +41,12 @@ class EmployeeContainer extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col xs={4}>
+          <Col>
             <SearchListContainer
               employees={filteredEmployees}
               handleInput={this.handleInput}
               handleClick={this.handleClick}
             />
-          </Col>
-          <Col>
-            <EmployeeBoxDetail employee={this.state.selected} />
           </Col>
         </Row>
       </Container>

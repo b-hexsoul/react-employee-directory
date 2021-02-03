@@ -5,8 +5,9 @@ export function SearchBar(props) {
   return (
     <Form.Group className="mt-3">
       <Form.Control
+        className="mx-auto"
         type="search"
-        placeholder="Name"
+        placeholder="Search Employees"
         onChange={(e) => {
           props.handleInput(e);
         }}
