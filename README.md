@@ -9,8 +9,7 @@ View it live on [GitHub Pages](https://brandon.is-a.dev/react-employee-directory
 - [About The Project](#about-the-project)
   - [Built With](#built-with)
 - [Installation](#installation)
-- [Usage](#usage)
-  - [Demo](#demo)
+
 - [Contributing](#contributing)
 - [Contact](#contact)
 
@@ -20,7 +19,7 @@ This project is a homework for Full Stack Bootcamp. It is an Employee Directory 
 
 <hr>
 
-![Main Snapshot](./public/images/directory.png)
+![Main Snapshot](./public/images/directory.gif)
 
 <hr>
 
